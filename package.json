@@ -1,0 +1,15 @@
+{
+  "name": "node-chatroom",
+  "version": "1.0.0",
+  "description": "This chatroom app will demonstrate node fundamentals",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Ryan M. Medina",
+  "license": "MIT",
+  "dependencies": {
+    "mime": "^1.3.4",
+    "socket.io": "^1.4.5"
+  }
+}
