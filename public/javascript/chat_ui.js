@@ -40,7 +40,7 @@ $(document).ready(function () {
 		}
 
 		// Allow click of a room name to change to that room
-		$('#room-list div').click(function() {
+		$('#room-list div').click(function () {
 			chatApp.processCommand('/join ' + $(this).text());
 			$('#send-message').focus();
 		})
@@ -79,7 +79,7 @@ function processUserInput(chatApp, socket) {
 			$('#messages').append(divSystemContentElement(systemMessage));
 		}
 	} else {
-		chatApp.sendMessages($('#room').text(), message);
+		chatApp.sendMessage($('#room').text(), message);
 
 		$('#messages').append(divEscapeContentElement(systemMessage));
 		$('#messages').scrollTop($('#messages').prop('scrollHeight'));

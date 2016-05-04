@@ -2,7 +2,7 @@ var Chat = function (socket) {
 	this.socket = socket;
 };
 
-Chat.prototype.sendMessages = function (room, text) {
+Chat.prototype.sendMessage = function (room, text) {
 	var message = {
 		room: room,
 		text: text
@@ -36,7 +36,7 @@ Chat.prototype.processCommand = function (command) {
 
 		case 'nick':
 			words.shift();
-			var name = words.join();
+			var name = words.join(' ');
 
 			// Handle name-change attempts
 			this.socket.emit('nameAttempt', name);
