@@ -80,10 +80,9 @@ function processUserInput(chatApp, socket) {
 		}
 	} else {
 		chatApp.sendMessage($('#room').text(), message);
-
-		$('#messages').append(divEscapeContentElement(systemMessage));
+		$('#messages').append(divEscapeContentElement(message));
 		$('#messages').scrollTop($('#messages').prop('scrollHeight'));
 	}
 
-	$('#send-message').val();
+	$('#send-message').val('');
 }
